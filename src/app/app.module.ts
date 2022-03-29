@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { LoginPage } from './pages/login/loginPage';
-import { CataloguePage } from './pages/catalogue/cataloguePage';
-import { TrainerPage } from './pages/trainer/trainerPage';
+import { LoginComponent } from './pages/login/login.component';
+import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { TrainerComponent } from './pages/trainer/trainer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginPage,
-    CataloguePage,
-    TrainerPage
+    LoginComponent,
+    CatalogueComponent,
+    TrainerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,81 @@
+.headerContainer {
+    background-color: rgb(113, 159, 211);
+    border-bottom: solid 3px rgb(72, 101, 134);
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100px;
+}
+
+.headerName {
+    float: left;
+    margin-top: 25px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+  
+.headerName:hover {
+    filter: drop-shadow(0px 0px 5px rgb(0, 89, 255));
+    cursor: pointer;
+}
+  
+.headerName p {
+    font-size: 30px;
+    margin-top: 0px;
+}
+  
+.headerLogo {
+    height: 80px;
+    margin-top: -15px;
+    margin-right: 30px;
+}
+  
+.headerUserContainer {
+    display: flex;
+    float: right;
+}
+  
+.headerUserAccount {
+    margin-top: 19px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+}
+  
+.headerUserAccount:hover {
+    filter: drop-shadow(0px 0px 5px rgb(0, 89, 255));
+    cursor: pointer;
+}
+  
+.logOutButton {
+    height: 40px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border: solid 5px black(255, 174, 0);
+    margin-top: 35px;
+}
+  
+.logOutButton:hover {
+    filter: drop-shadow(0px 0px 5px rgb(0, 89, 255));
+    cursor: pointer;
+}
+  
+.accountName {
+    background-color: rgb(72, 101, 134);
+    padding: 10px 50px 10px 10px;
+    border-radius: 20px;
+    margin-right: -25px;
+    padding-left: 20px;
+}
+  
+.accountLogo {
+    background-color: rgb(72, 101, 134);
+    height: 60px;
+    width: 60px;
+    border-radius: 40px;
+    margin-top: 5px;
+    border: solid black;
+}
