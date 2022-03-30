@@ -1,0 +1,73 @@
+.background {
+    background-color: rgb(113, 159, 211);
+    height: 300px;
+    width: 100%;
+    margin-bottom: -200px;
+}
+
+.inputContainer {
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 150px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid 20px rgb(255, 174, 0);
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+}
+
+/* Pokémon container */
+.pokemonContainer {
+    height: 100px;
+    width: 90%;
+    margin-top: 50px;
+    margin-left: 5%;
+    filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+    background-color: white;
+    display: flex;
+    font-size: 50px;
+    border-radius: 20px;
+}
+
+.pokemonContainer p {
+    margin-top: 10px;
+}
+
+.pokemonImg {
+    height: 90px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.pokemonName {
+    margin: 0 50px;
+    width: 70%;
+}
+
+.pokemonCaught {
+    height: 80%;
+    padding: 0 10px;
+    font-weight: bolder;
+    color: green;
+    width: 200px;
+}
+
+.pokemonCatch {
+    font-size: 50px;
+    font-weight: bolder;
+    height: 80%;
+    margin-top: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: white;
+    color: rgb(255, 174, 0);
+    width: 200px;
+}
+
+.pokemonCatch:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px rgb(0, 89, 255));
+}
