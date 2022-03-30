@@ -2,7 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable, of, switchMap } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { StorageKeys } from '../enums/storage-keys.enum';
 import { Trainer } from '../models/trainer.model';
+import { StorageUtil } from '../utils/storage.util';
 
 const { apiTrainers, apiKey } = environment;
 
@@ -21,6 +23,17 @@ export class LoginService {
         return of(trainer);
       })
     );
+  }
+
+  public logout(): void {
+    StorageUtil.storageClear();
+  }
+
+  public isTrainerLoggedIn(): boolean {
+    if (StorageUtil.storageRead<Trainer>(StorageKeys.Trainer)) {
+      return true;
+    }
+    return false;
   }
 
   private checkUsername(username: string): Observable<Trainer | undefined> {

@@ -4,11 +4,11 @@
     <p>Pokémon</p>
   </div>
 
-  <div class="headerUserContainer">
+  <div class="headerUserContainer" *ngIf="isTrainerLoggedIn">
     <div routerLink="/trainer" class="headerUserAccount">
-      <p class="accountName">username</p>
+      <p class="accountName">{{ currentTrainer?.username }}</p>
       <img src="/assets/images/userLogo.png" class="accountLogo" alt="Image" />
     </div>
-    <button routerLink="/" class="logOutButton">Log out</button>
+    <button (click)="handleLogout()" class="logOutButton">Log out</button>
   </div>
 </header>
