@@ -37,7 +37,8 @@
 }
 
 .pokemonImg {
-    height: 100px;
+    height: 90px;
+    margin-top: 5px;
     margin-left: 10px;
 }
 

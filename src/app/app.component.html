@@ -1,16 +1,16 @@
 <header class="headerContainer">
 
-    <div class="headerName">
+    <div routerLink="/catalogue" class="headerName">
         <img src="/assets/images/projectLogo.png" class="headerLogo" alt="Logo" />
         <p>Pokémon</p>
     </div>
 
     <div class="headerUserContainer">
-        <div class="headerUserAccount">
+        <div routerLink="/trainer" class="headerUserAccount">
             <p class="accountName">username</p>
             <img src="/assets/images/userLogo.png" class="accountLogo" alt="Image" />
         </div>
-        <button class="logOutButton" onClick={onLogoutClick}>Log out</button>
+        <button routerLink="/" class="logOutButton">Log out</button>
     </div>
 
 </header> 
