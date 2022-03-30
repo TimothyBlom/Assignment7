@@ -1,19 +1,34 @@
-import { Component, NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { LoginComponent } from './pages/login/login.component';
-import { CatalogueComponent } from './pages/catalogue/catalogue.component';
-import { TrainerComponent } from './pages/trainer/trainer.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { LoginPage } from './pages/login/login.page';
+import { CataloguePage } from './pages/catalogue/catalogue.page';
+import { TrainerPage } from './pages/trainer/trainer.page';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-    { path: "", component: LoginComponent },
-    { path: "catalogue", component: CatalogueComponent },
-    { path: "trainer", component: TrainerComponent }
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/login',
+  },
+  {
+    path: 'login',
+    component: LoginPage,
+  },
+  {
+    path: 'catalogue',
+    component: CataloguePage,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'trainer',
+    component: TrainerPage,
+    canActivate: [AuthGuard],
+  },
 ];
 
-    @NgModule({
-        imports: [RouterModule.forRoot(routes)],
-        exports: [RouterModule]
-    })
-    export class AppRoutingModule {
-
-}
+@NgModule({
+  imports: [RouterModule.forRoot(routes)], //import a module
+  exports: [RouterModule], //expose module and features
+})
+export class AppRoutingModule {}
