@@ -20,6 +20,10 @@ export class LoginFormComponent {
   public loginSubmit(loginForm: NgForm): void {
     const { username } = loginForm.value;
 
+    if (!username.trim()) {
+      return;
+    }
+
     this.loginService.login(username).subscribe({
       next: (trainer: Trainer) => {
         this.trainerService.trainer = trainer;

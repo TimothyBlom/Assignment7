@@ -1,16 +1,11 @@
 <div class="background"></div>
 
 <div class="loginPageContent">
-    <img src="/assets/images/projectLogo.png" class="loginLogo" alt="logo" />
-    <div class="loginPageText">
-        <h1>Gotta catch em all</h1>
-        <h2>Log in and get started</h2>
-    </div>
+  <img src="/assets/images/projectLogo.png" class="loginLogo" alt="logo" />
+  <div class="loginPageText">
+    <h1>Gotta catch em all</h1>
+    <h2>Log in and get started</h2>
+  </div>
 </div>
 
-<form class="inputContainer">
-    <div class="input">
-      <input class="inputField" placeholder="Type your name here" />
-      <input routerLink="/catalogue" class="inputButton" type="image" src="/assets/images/nextLogo.png" alt="Next" />
-    </div>
-</form>
+<app-login-form (login)="handleLogin()"></app-login-form>

@@ -1,11 +1,21 @@
-<form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
-  <label for="username">Username</label>
-  <input
-    ngModel
-    #username="ngModel"
-    type="text"
-    name="username"
-    id="username"
-  />
-  <button type="submit">Login</button>
+<form
+  class="inputContainer"
+  #loginForm="ngForm"
+  (ngSubmit)="loginSubmit(loginForm)"
+>
+  <div class="input">
+    <input
+      class="inputField"
+      placeholder="Type your name here"
+      name="username"
+      ngModel
+      #username="ngModel"
+    />
+    <input
+      class="inputButton"
+      type="image"
+      src="/assets/images/nextLogo.png"
+      alt="Login"
+    />
+  </div>
 </form>
