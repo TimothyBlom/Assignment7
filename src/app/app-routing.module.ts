@@ -4,6 +4,7 @@ import { LoginPage } from './pages/login/login.page';
 import { CataloguePage } from './pages/catalogue/catalogue.page';
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { AuthGuard } from './guards/auth.guard';
+import { AccessGuard } from './guards/access.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginPage,
+    canActivate: [AccessGuard],
   },
   {
     path: 'catalogue',

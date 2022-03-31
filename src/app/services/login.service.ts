@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { StorageKeys } from '../enums/storage-keys.enum';
 import { Trainer } from '../models/trainer.model';
 import { StorageUtil } from '../utils/storage.util';
+import { TrainerService } from './trainer.service';
 
 const { apiTrainers, apiKey } = environment;
 
@@ -12,7 +13,10 @@ const { apiTrainers, apiKey } = environment;
   providedIn: 'root',
 })
 export class LoginService {
-  constructor(private readonly http: HttpClient) {}
+  constructor(
+    private readonly http: HttpClient,
+    private trainerService: TrainerService
+  ) {}
 
   public login(username: string): Observable<Trainer> {
     return this.checkUsername(username).pipe(
@@ -27,6 +31,7 @@ export class LoginService {
 
   public logout(): void {
     StorageUtil.storageClear();
+    this.trainerService.trainer = undefined;
   }
 
   public isTrainerLoggedIn(): boolean {
