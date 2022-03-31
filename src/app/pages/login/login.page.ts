@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,9 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.css'],
 })
 export class LoginPage {
-  constructor(private readonly router: Router) {}
+  constructor(
+    private readonly router: Router,
+    ) {}
 
   handleLogin(): void {
-    this.router.navigateByUrl('/catalogue');
+    this.router.navigateByUrl('/catalogue'); 
   }
 }
