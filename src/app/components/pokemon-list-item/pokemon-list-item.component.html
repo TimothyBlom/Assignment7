@@ -1,0 +1,12 @@
+<li *ngIf="singlePokemon">
+  <div class="pokemonContainer">
+    <img
+      [src]="singlePokemon.image"
+      class="pokemonImg"
+      [alt]="singlePokemon.name"
+    />
+    <p class="pokemonName">{{ singlePokemon.name }}</p>
+    <p class="pokemonCaught">Caught</p>
+    <button class="pokemonCatch">catch</button>
+  </div>
+</li>

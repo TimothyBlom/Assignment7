@@ -1,13 +1,7 @@
 <div class="background"></div>
 
 <div class="inputContainer">
-    <h1>Wild Pokémon</h1>
-
-    <div class="pokemonContainer" *ngFor=" let pokemon of pokemons ">
-        <img [src]="pokemon.sprites.front_default" class="pokemonImg" alt="pokemon" />
-        <p class="pokemonName">{{ pokemon.name }}</p>
-        <p class="pokemonCaught">Caught</p>
-        <button class="pokemonCatch">catch</button>
-    </div>
-
+  <h1>Wild Pokémon</h1>
+  <p *ngIf="loading">Loading Pokemon...</p>
+  <app-pokemon-list [pokemon]="pokemon"></app-pokemon-list>
 </div>

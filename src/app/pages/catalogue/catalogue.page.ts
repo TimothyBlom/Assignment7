@@ -1,27 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { PokeApiService } from 'src/app/services/pokeApi.service';
+import { Pokemon } from 'src/app/models/pokemon.model';
+import { PokemonCatalogueService } from 'src/app/services/pokemon-catalogue.service';
 
 @Component({
   selector: 'app-catalogue',
   templateUrl: './catalogue.page.html',
-  styleUrls: ['./catalogue.page.css']
+  styleUrls: ['./catalogue.page.css'],
 })
 export class CataloguePage implements OnInit {
-  pokemons: any[] = [];
-
-  constructor( private pokeApiService: PokeApiService ){ }
-
-  ngOnInit(): void {
-    this.pokeApiService.getPokemons()
-      .subscribe((response: any) => { 
-        response.results.forEach((result: { name: string; }) => {
-          this.pokeApiService.getPokemonNames(result.name)
-            .subscribe((uniqResponse: any) => {
-              this.pokemons.push(uniqResponse);
-              console.log(this.pokemons);
-            });
-        });
-      });
+  get pokemon(): Pokemon[] {
+    return this.pokemonCatalogueService.pokemon;
   }
 
+  get loading(): boolean {
+    return this.pokemonCatalogueService.loading;
+  }
+
+  get error(): string {
+    return this.pokemonCatalogueService.error;
+  }
+
+  constructor(
+    private readonly pokemonCatalogueService: PokemonCatalogueService
+  ) {}
+
+  ngOnInit(): void {
+    this.pokemonCatalogueService.findAllPokemon();
+  }
 }
