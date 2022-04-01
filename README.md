@@ -14,7 +14,7 @@ We chose to only display 20 pokémon, for simplicity and performence.
 To view this app on heroku, click [here](https://assignment7-wessel-timothy.herokuapp.com/login)
 
 ## We have an component tree
-![Component tree!](Pokemon-Trainer-Component-Tree.pdf)
+![Component tree!](Pokemon-Trainer-Component-Tree.png)
 
 ## Made by
 Wessel Konstantinov & Timothy Blom
