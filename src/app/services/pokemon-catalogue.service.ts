@@ -35,6 +35,10 @@ export class PokemonCatalogueService {
   }
 
   public findAllPokemon(): void {
+    if (this._pokemon.length > 0 || this.loading) {
+      return;
+    }
+
     this._loading = true;
     this.http
       .get<any>(apiPokemon)
@@ -60,5 +64,9 @@ export class PokemonCatalogueService {
           this._error = error.message;
         },
       });
+  }
+
+  public pokemonById(id: number): Pokemon | undefined {
+    return this._pokemon.find((pokemon: Pokemon) => pokemon.id === id);
   }
 }

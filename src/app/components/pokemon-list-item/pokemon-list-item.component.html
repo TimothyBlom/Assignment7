@@ -6,7 +6,22 @@
       [alt]="singlePokemon.name"
     />
     <p class="pokemonName">{{ singlePokemon.name }}</p>
-    <p class="pokemonCaught">Caught</p>
-    <button class="pokemonCatch">catch</button>
+    <p class="pokemonCaught" *ngIf="hasBeenCaught && isCatalogueRoute()">
+      Caught
+    </p>
+    <button
+      *ngIf="!hasBeenCaught && isCatalogueRoute()"
+      class="pokemonCatch"
+      (click)="onCatchClick()"
+    >
+      Catch
+    </button>
+    <button
+      class="pokemonRelease"
+      *ngIf="!isCatalogueRoute()"
+      (click)="onReleaseClick()"
+    >
+      Release
+    </button>
   </div>
 </li>

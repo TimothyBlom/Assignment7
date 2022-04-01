@@ -21,4 +21,12 @@ export class TrainerService {
   constructor() {
     this._trainer = StorageUtil.storageRead<Trainer>(StorageKeys.Trainer);
   }
+
+  public inCaughtPokemon(pokemonName: string): boolean {
+    if (this._trainer) {
+      return Boolean(this.trainer?.pokemon.includes(pokemonName));
+    }
+
+    return false;
+  }
 }

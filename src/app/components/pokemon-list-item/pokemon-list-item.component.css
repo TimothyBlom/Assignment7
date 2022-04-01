@@ -50,3 +50,20 @@
   cursor: pointer;
   filter: drop-shadow(0px 0px 5px rgb(0, 89, 255));
 }
+
+.pokemonRelease {
+  font-size: 50px;
+  font-weight: bolder;
+  height: 80%;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: rgb(255, 174, 0);
+  width: 200px;
+}
+
+.pokemonRelease:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 5px rgb(0, 89, 255));
+}
